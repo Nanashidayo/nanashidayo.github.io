@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registerCSS.css">
+    <title>Create new account</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="title">REGISTRATION FORM</div>
+        
+        <form class="form" action="your_action_url" method="GET">
+            <div class="details">
+                <div class="inputs">
+                    <span class="names">Username:</span>
+                    <input id="username" name="username" type="text" placeholder="Enter username">                    
+                    <div id="username_error"></div>
+                </div>
+        
+                <div class="inputs">
+                    <span class="email">Email:</span>
+                    <input id="email" name="email" type="email" placeholder="Enter valid Email">                    
+                    <div id="email_error"></div>
+                </div>
+        
+                <div class="inputs">
+                    <span class="phone_number">Phone Number:</span>
+                    <input id="phone_number" name="phone_number" type="tel" placeholder="Enter valid phone number" 
+                    pattern="[0-9]*" 
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')" 
+                    placeholder="1234567890">
+                                     
+                    <div id="phone_number_error"></div>
+                </div>
+        
+                <div class="inputs">
+                    <span class="names">Password:</span>
+                    <input id="password" name="password" type="password" placeholder="Enter password">
+                    <div id="password_error"></div>
+                </div>
+        
+                <div class="inputs">
+                    <span class="names">Confirm Password:</span>
+                    <input id="confirm_password" name="confirm_password" type="password" placeholder="Confirm Password">
+                    <div id="confirm_password_error"></div>
+                </div>
+        
+                <div class="button_container">
+                    <button type="submit" id="submit">Register</button>
+                </div>
+            </div>
+        </form>
+        
+        <div id="success_message" style="color: green;"></div>
+        
+    </div>
+    <script src="registerJS.js"></script>
+</body>
+</html>
